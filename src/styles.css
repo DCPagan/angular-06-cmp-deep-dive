@@ -43,7 +43,7 @@ header {
   filter: drop-shadow(0 0 4px rgba(29, 29, 29, 0.35));
 }
 
-nav ul {
+nav menu {
   display: flex;
   gap: 2rem;
   list-style: none;
@@ -52,13 +52,13 @@ nav ul {
   margin: 0;
 }
 
-nav ul li a {
+nav menu li a {
   color: #3e3b3e;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav ul li a:hover {
+nav menu li a:hover {
   color: #77207a;
 }
 
