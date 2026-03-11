@@ -1,22 +1,16 @@
-<article>
-  <header>
-    <img src="status.png" alt="A signal symbol" />
-    <h2>Server Status</h2>
-  </header>
-  <div>
-    @switch (currentStatus) {
-      @case ('online') {
-        <p>Servers are online</p>
-        <p>All systems are operational.</p>
-      }
-      @case ('offline') {
-        <p>Servers are offline</p>
-        <p>Functionality should be restored soon.</p>
-      }
-      @default {
-        <p>Server status is unknown</p>
-        <p>Fetching server status failed.</p>
-      }
+<div>
+  @switch (currentStatus) {
+    @case ('online') {
+      <p>Servers are online</p>
+      <p>All systems are operational.</p>
     }
-  </div>
-</article>
+    @case ('offline') {
+      <p>Servers are offline</p>
+      <p>Functionality should be restored soon.</p>
+    }
+    @default {
+      <p>Server status is unknown</p>
+      <p>Fetching server status failed.</p>
+    }
+  }
+</div>
