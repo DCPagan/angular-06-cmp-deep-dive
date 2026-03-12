@@ -1,16 +1,14 @@
-<div id="status">
-  @switch (currentStatus) {
-    @case ('online') {
-      <p>Servers are online</p>
-      <p>All systems are operational.</p>
-    }
-    @case ('offline') {
-      <p>Servers are offline</p>
-      <p>Functionality should be restored soon.</p>
-    }
-    @default {
-      <p>Server status is unknown</p>
-      <p>Fetching server status failed.</p>
-    }
+@switch (currentStatus) {
+  @case ('online') {
+    <p>Servers are online</p>
+    <p>All systems are operational.</p>
   }
-</div>
+  @case ('offline') {
+    <p>Servers are offline</p>
+    <p>Functionality should be restored soon.</p>
+  }
+  @default {
+    <p>Server status is unknown</p>
+    <p>Fetching server status failed.</p>
+  }
+}
