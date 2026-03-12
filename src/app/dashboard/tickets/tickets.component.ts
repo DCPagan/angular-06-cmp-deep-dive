@@ -8,6 +8,4 @@ import { NewTicketComponent } from "./new-ticket/new-ticket.component";
   templateUrl: './tickets.component.html',
   styleUrl: './tickets.component.css'
 })
-export class TicketsComponent {
-
-}
+export class TicketsComponent {}
