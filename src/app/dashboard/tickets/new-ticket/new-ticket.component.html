@@ -1,6 +1,6 @@
-<form id="new-ticket">
+<form (ngSubmit)="onSubmit(titleInput)">
   <app-control label="Title" name="title">
-    <input id="title" name="title" type="text" />
+    <input id="title" name="title" type="text" #titleInput />
   </app-control>
   <app-control label="Request" name="request">
     <textarea id="request" name="request"></textarea>
