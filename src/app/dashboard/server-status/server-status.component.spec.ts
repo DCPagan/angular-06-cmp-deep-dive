@@ -10,7 +10,7 @@ describe('ServerStatusComponent', () => {
     await TestBed.configureTestingModule({
       imports: [ServerStatusComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ServerStatusComponent);
     component = fixture.componentInstance;

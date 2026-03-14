@@ -1,4 +1,4 @@
-import { Component, input, Input, ViewEncapsulation } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 interface Image {
   src: string;
@@ -7,7 +7,6 @@ interface Image {
 
 @Component({
   selector: 'app-dashboard-item',
-  standalone: true,
   imports: [],
   templateUrl: './dashboard-item.component.html',
   styleUrl: './dashboard-item.component.css'

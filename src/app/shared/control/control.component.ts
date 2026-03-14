@@ -1,8 +1,10 @@
-import { AfterContentInit, Component, contentChild, ContentChild, ElementRef, inject, input, ViewEncapsulation } from '@angular/core';
+import {
+  AfterContentInit, Component, contentChild, ElementRef, inject, input,
+  ViewEncapsulation
+} from '@angular/core';
 
 @Component({
   selector: 'app-control',
-  standalone: true,
   imports: [],
   templateUrl: './control.component.html',
   styleUrl: './control.component.css',

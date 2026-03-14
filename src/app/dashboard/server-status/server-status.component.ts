@@ -6,7 +6,6 @@ type ServerStatus = 'online' | 'offline' | 'unknown';
 
 @Component({
   selector: 'app-server-status',
-  standalone: true,
   imports: [],
   templateUrl: './server-status.component.html',
   styleUrl: './server-status.component.css'
@@ -27,9 +26,5 @@ export class ServerStatusComponent implements OnInit {
     this.destroyRef.onDestroy(() => {
       clearInterval(timer);
     });
-  }
-
-  ngAfterViewInit(): void {
-    console.log('After view init')
   }
 }
