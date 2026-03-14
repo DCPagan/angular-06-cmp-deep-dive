@@ -1,4 +1,4 @@
-import { Component, input, signal } from '@angular/core';
+import { Component, input, output, signal } from '@angular/core';
 import { type Ticket } from '../ticket.model';
 
 @Component({
@@ -9,9 +9,14 @@ import { type Ticket } from '../ticket.model';
 })
 export class TicketComponent {
   readonly ticket = input.required<Ticket>();
+  complete = output<void>();
   visible = signal<boolean>(false);
 
   onToggleVisibility(): void {
     this.visible.update((visible) => !visible);
+  }
+
+  onComplete(): void {
+    this.complete.emit();
   }
 }

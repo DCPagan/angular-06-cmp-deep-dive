@@ -48,7 +48,7 @@
 
     @if (ticket().status === 'open') {
       <p>
-        <button>Mark as completed</button>
+        <button (click)="onComplete()">Mark as completed</button>
       </p>
     }
   }
