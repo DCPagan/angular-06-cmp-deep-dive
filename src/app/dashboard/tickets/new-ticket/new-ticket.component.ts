@@ -1,4 +1,6 @@
-import { Component, ElementRef, viewChild } from '@angular/core';
+import {
+  AfterViewInit, Component, ElementRef, OnInit, ViewChild, viewChild
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from '../../../shared/button/button.component';
 import { ControlComponent } from "../../../shared/control/control.component";
@@ -10,13 +12,23 @@ import { ControlComponent } from "../../../shared/control/control.component";
   templateUrl: './new-ticket.component.html',
   styleUrl: './new-ticket.component.css'
 })
-export class NewTicketComponent {
-  // @ViewChild('form') private form?: ElementRef<HTMLFormElement>;
-  private form = viewChild.required<ElementRef<HTMLFormElement>>('form');
+export class NewTicketComponent implements OnInit, AfterViewInit {
+  @ViewChild('form') private form?: ElementRef<HTMLFormElement>;
+  // private form = viewChild.required<ElementRef<HTMLFormElement>>('form');
+
+  ngOnInit(): void {
+    console.log('On init');
+    console.log(this.form?.nativeElement);
+  }
+
+  ngAfterViewInit(): void {
+    console.log('After view init');
+    console.log(this.form?.nativeElement);
+  }
 
   onSubmit(title: string, request: string): void {
     console.log(title);
     console.log(request);
-    this.form().nativeElement.reset();
+    this.form?.nativeElement.reset();
   }
 }

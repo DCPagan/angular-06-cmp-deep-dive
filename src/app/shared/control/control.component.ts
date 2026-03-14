@@ -1,4 +1,4 @@
-import { Component, contentChild, ContentChild, ElementRef, inject, input, ViewEncapsulation } from '@angular/core';
+import { AfterContentInit, Component, contentChild, ContentChild, ElementRef, inject, input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-control',
@@ -12,7 +12,7 @@ import { Component, contentChild, ContentChild, ElementRef, inject, input, ViewE
     '(click)': 'onClick()'
   }
 })
-export class ControlComponent {
+export class ControlComponent implements AfterContentInit {
   // @HostBinding('class') className = 'control'
   readonly name = input<string>();
   readonly label = input.required<string>();
@@ -22,7 +22,12 @@ export class ControlComponent {
   // >;
   private control = contentChild.required<
     ElementRef<HTMLInputElement | HTMLTextAreaElement>
-  >('input')
+  >('input');
+
+  ngAfterContentInit(): void {
+    console.log('After content init');
+    console.log(this.control().nativeElement);
+  }
 
   // @HostListener('click')
   onClick(): void {
